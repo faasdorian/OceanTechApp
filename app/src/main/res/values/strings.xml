@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">OceanTech App</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="login">LOGIN</string>
+    <string name="login_failed">Login failed</string>
+    <string name="invalid_username">Invalid Username</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="ola">Olá!</string>
+    <string name="portos">Portos</string>
+    <string name="integrantes">Integrantes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selecionar_porto">Selecione um porto</string>
+    <string name="selecionar_relatorio">Selecione um relatório</string>
+    <string name="relatorios_nao_encontrados">Nenhum relatório encontrado :(</string>
+    <string name="portos_nao_encontrados">Nenhum porto encontrado :(</string>
+    <string name="indicadores_fragment_title1">"Relatório do dia "</string>
+    <string name="indicadores_fragment_title2">"de "</string>
+    <string name="indicador_nome">"Nome: "</string>
+    <string name="indicador_valor">"Valor: "</string>
+    <string name="indicador_parametro">"Parâmetro: "</string>
+</resources>

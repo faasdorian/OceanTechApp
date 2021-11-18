@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.zenith.oceantechapp.fragment.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.zenith.oceantechapp.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="user"
+            app:argType="br.com.zenith.oceantechapp.model.User" />
+        <action
+            android:id="@+id/action_homeFragment_to_integrantesFragment"
+            app:destination="@id/integrantesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_portosFragment"
+            app:destination="@id/portosFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/portosFragment"
+        android:name="br.com.zenith.oceantechapp.fragment.PortosFragment"
+        android:label="fragment_portos"
+        tools:layout="@layout/fragment_portos" >
+        <action
+            android:id="@+id/action_portosFragment_to_relatoriosFragment"
+            app:destination="@id/relatoriosFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/integrantesFragment"
+        android:name="br.com.zenith.oceantechapp.fragment.IntegrantesFragment"
+        android:label="fragment_integrantes"
+        tools:layout="@layout/fragment_integrantes" />
+    <fragment
+        android:id="@+id/relatoriosFragment"
+        android:name="br.com.zenith.oceantechapp.fragment.RelatoriosFragment"
+        android:label="fragment_relatorios"
+        tools:layout="@layout/fragment_relatorios" >
+        <argument
+            android:name="porto"
+            app:argType="br.com.zenith.oceantechapp.model.Porto" />
+        <action
+            android:id="@+id/action_relatoriosFragment_to_indicadoresFragment"
+            app:destination="@id/indicadoresFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/indicadoresFragment"
+        android:name="br.com.zenith.oceantechapp.fragment.IndicadoresFragment"
+        android:label="fragment_indicadores"
+        tools:layout="@layout/fragment_indicadores" >
+        <argument
+            android:name="relatorio"
+            app:argType="br.com.zenith.oceantechapp.model.Relatorio" />
+        <argument
+            android:name="porto"
+            app:argType="br.com.zenith.oceantechapp.model.Porto" />
+    </fragment>
+</navigation>
